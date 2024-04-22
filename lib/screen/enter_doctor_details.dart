@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:babycare/screen/add_data.dart';
+import 'package:babycare/screen/doctor_success.dart';
 import 'package:babycare/screen/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -49,6 +50,14 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
     numberEditingController.clear();
     timeEditingController.clear();
     descriptionEditingController.clear();
+
+    Navigator.push(
+      // ignore: use_build_context_synchronously
+      context,
+      MaterialPageRoute(
+        builder: (context) => DoctorSuccess(),
+      ),
+    );
   }
 
   @override
