@@ -1,4 +1,5 @@
 import 'package:babycare/screen/enter_doctor_details.dart';
+import 'package:babycare/screen/user_dashboard.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {
@@ -18,7 +19,7 @@ class Test extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => EnterDoctorDetails(),
+                      builder: (context) => UserDashboard(),
                     ),
                   );
                 },
