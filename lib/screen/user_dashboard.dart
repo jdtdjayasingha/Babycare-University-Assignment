@@ -1,3 +1,4 @@
+import 'package:babycare/screen/menu.dart';
 import 'package:flutter/material.dart';
 
 class UserDashboard extends StatefulWidget {
@@ -12,10 +13,11 @@ class _UserDashboardState extends State<UserDashboard> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
+    // Text(
+    //   'Home',
+    //   style: optionStyle,
+    // ),
+    Menu(),
     Text(
       'Appointment',
       style: optionStyle,
