@@ -49,7 +49,14 @@ class DoctorSuccess extends StatelessWidget {
                         child: Column(
                           children: [
                             const Text(
-                              "Your Registration Is \n      Successful !",
+                              "Doctor Registration is",
+                              style: TextStyle(
+                                fontSize: 25,
+                                color: Color.fromARGB(255, 9, 9, 9),
+                              ),
+                            ),
+                            const Text(
+                              "Successful !",
                               style: TextStyle(
                                 fontSize: 25,
                                 color: Color.fromARGB(255, 9, 9, 9),

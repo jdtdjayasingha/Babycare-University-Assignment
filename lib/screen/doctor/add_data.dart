@@ -24,18 +24,18 @@ class StoreData {
 
   Future<String> saveData({
     required String name,
-    required String quantity,
-    required String price,
+    required String number,
+    required String time,
     required String description,
     required Uint8List file,
   }) async {
     try {
-      if (name.isNotEmpty && quantity.isNotEmpty) {
+      if (name.isNotEmpty && number.isNotEmpty) {
         String imageUrl = await uploadImageToStorage(file);
         await _firestore.collection('saveDoctorDetails').add({
           'name': name,
-          'quantity': quantity,
-          'price': price,
+          'number': number,
+          'time': time,
           'description': description,
           'imageLink': imageUrl,
         });

@@ -31,15 +31,15 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
 
   void saveDoctor() async {
     String name = nameEditingController.text;
-    String quantity = numberEditingController.text;
-    String price = timeEditingController.text;
+    String  number = numberEditingController.text;
+    String time = timeEditingController.text;
     String description = descriptionEditingController.text;
 
     // ignore: unused_local_variable
     String resp = await StoreData().saveData(
         name: name,
-        quantity: quantity,
-        price: price,
+        number: number,
+        time: time,
         description: description,
         file: _image!);
 
