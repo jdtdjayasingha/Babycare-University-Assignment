@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
-import 'package:babycare/screen/add_data.dart';
-import 'package:babycare/screen/doctor_success.dart';
-import 'package:babycare/screen/utils.dart';
+import 'package:babycare/screen/doctor/add_data.dart';
+import 'package:babycare/screen/doctor/doctor_success.dart';
+import 'package:babycare/screen/doctor/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -15,9 +15,6 @@ class EnterDoctorDetails extends StatefulWidget {
 
 class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
   Uint8List? _image;
-
-  // final TextEditingController nameController = TextEditingController();
-  // final TextEditingController bioController = TextEditingController();
 
   final TextEditingController nameEditingController = TextEditingController();
   final TextEditingController numberEditingController = TextEditingController();
