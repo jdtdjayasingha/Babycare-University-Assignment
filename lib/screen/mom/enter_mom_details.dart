@@ -1,8 +1,7 @@
 import 'dart:typed_data';
 
-import 'package:babycare/screen/doctor/doctor_success.dart';
-
 import 'package:babycare/screen/mom/add_data.dart';
+import 'package:babycare/screen/mom/mom_success.dart';
 import 'package:babycare/screen/mom/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -49,7 +48,7 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
       // ignore: use_build_context_synchronously
       context,
       MaterialPageRoute(
-        builder: (context) => DoctorSuccess(),
+        builder: (context) => MomSuccess(),
       ),
     );
   }
