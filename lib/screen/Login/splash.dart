@@ -1,6 +1,6 @@
 import 'dart:async';
+import 'package:babycare/screen/Login/loading.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_app/screen/login/loading.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
