@@ -1,5 +1,5 @@
 import 'package:babycare/screen/mom/enter_mom_details.dart';
-import 'package:babycare/screen/user_dashboard.dart';
+import 'package:babycare/screen/mom/user_dashboard.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {
