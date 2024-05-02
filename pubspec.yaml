@@ -39,6 +39,9 @@ dependencies:
   image_picker: ^1.1.0
   cloud_firestore: ^4.17.0
   firebase_storage: ^11.7.2
+  swipeable_button_view: ^0.0.2
+  page_transition: ^2.1.0
+  pretty_gauge: ^1.0.1
 
 dev_dependencies:
   flutter_test:

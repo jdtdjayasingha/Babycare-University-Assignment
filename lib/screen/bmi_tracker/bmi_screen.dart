@@ -1,9 +1,9 @@
 import 'dart:math';
 
+import 'package:babycare/screen/bmi_tracker/age_weight.dart';
+import 'package:babycare/screen/bmi_tracker/height.dart';
+import 'package:babycare/screen/bmi_tracker/score_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_app/screen/bmi_tracker/age_weight.dart';
-import 'package:mobile_app/screen/bmi_tracker/height.dart';
-import 'package:mobile_app/screen/bmi_tracker/score_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
 
