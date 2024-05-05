@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 class DoctorSignIn extends StatefulWidget {
@@ -8,6 +10,46 @@ class DoctorSignIn extends StatefulWidget {
 }
 
 class _DoctorSignInState extends State<DoctorSignIn> {
+  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  Future<void> login(BuildContext context) async {
+    try {
+      final userCredential = await firebaseAuth.signInWithEmailAndPassword(
+        email: emailController.text.toString(),
+        password: passwordController.text.toString(),
+      );
+      if (userCredential.user != null) {
+        Get.snackbar("Login", "Success");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Scaffold()),
+        );
+      } else {
+        Get.snackbar("Login", "Failed");
+      }
+    } catch (error) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('Error'),
+            content: const Text('Invalid username or password.'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +95,7 @@ class _DoctorSignInState extends State<DoctorSignIn> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         TextField(
+          controller: emailController,
           decoration: InputDecoration(
               hintText: "Enter Your Email",
               border: OutlineInputBorder(
@@ -66,6 +109,7 @@ class _DoctorSignInState extends State<DoctorSignIn> {
           height: 25,
         ),
         TextField(
+          controller: passwordController,
           decoration: InputDecoration(
             hintText: "Enter Your Password",
             border: OutlineInputBorder(
@@ -122,7 +166,9 @@ class _DoctorSignInState extends State<DoctorSignIn> {
           height: 15,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            login(context);
+          },
           child: Container(
             height: 50,
             decoration: BoxDecoration(
@@ -154,7 +200,12 @@ class _DoctorSignInState extends State<DoctorSignIn> {
       children: [
         const Text("Don't have an account?"),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SignUpSelectRole()),
+              );
+            },
             child: const Text(
               "Sign Up",
               style: TextStyle(color: Colors.green),
