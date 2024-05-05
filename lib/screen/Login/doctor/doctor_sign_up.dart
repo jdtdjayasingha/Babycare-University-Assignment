@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 class DoctorSignUp extends StatefulWidget {
@@ -8,6 +10,48 @@ class DoctorSignUp extends StatefulWidget {
 }
 
 class _DoctorSignUpState extends State<DoctorSignUp> {
+  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  final email = TextEditingController();
+  final password = TextEditingController();
+
+  Future<void> signup(BuildContext context) async {
+    try {
+      final userCredential = await firebaseAuth.createUserWithEmailAndPassword(
+        email: email.text.toString(),
+        password: password.text.toString(),
+      );
+      if (userCredential.user != null) {
+        Get.snackbar("Sign Up", "Success");
+        // Navigate to the topup page
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Scaffold()),
+        );
+      } else {
+        Get.snackbar("Sign Up", "Failed");
+      }
+    } catch (error) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text("Failed"),
+            content: Text("There was an error during sign up"),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text("OK"),
+              ),
+            ],
+          );
+        },
+      );
+      print("Error: $error");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +104,7 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         TextField(
+          controller: email,
           decoration: InputDecoration(
             hintText: "Doctor Email",
             border: OutlineInputBorder(
@@ -73,6 +118,7 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
           height: 25,
         ),
         TextField(
+          controller: password,
           decoration: InputDecoration(
             hintText: "Password",
             border: OutlineInputBorder(
@@ -104,7 +150,9 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
           height: 15,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            signup(context);
+          },
           child: Container(
             height: 50,
             decoration: BoxDecoration(
