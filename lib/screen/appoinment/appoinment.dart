@@ -14,9 +14,9 @@ class AppointmentPage extends StatefulWidget {
 class _AppointmentPageState extends State<AppointmentPage> {
   DateTime? _selectedDate;
   TimeOfDay? _selectedTime;
-  TextEditingController _fullNameController = TextEditingController();
-  TextEditingController _ageController = TextEditingController();
-  TextEditingController _problemController = TextEditingController();
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _ageController = TextEditingController();
+  final TextEditingController _problemController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
