@@ -1,3 +1,4 @@
+import 'package:babycare/screen/pregnancy_tracker/pregnancy_tracker_home.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatefulWidget {
@@ -250,7 +251,14 @@ class _MenuState extends State<Menu> {
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.green),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PregnancyTrackerHome()),
+                            );
+                          },
                           child: const Text(
                             'Track now',
                             style: TextStyle(
