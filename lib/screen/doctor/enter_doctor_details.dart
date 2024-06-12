@@ -31,7 +31,7 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
 
   void saveDoctor() async {
     String name = nameEditingController.text;
-    String  number = numberEditingController.text;
+    String number = numberEditingController.text;
     String time = timeEditingController.text;
     String description = descriptionEditingController.text;
 
@@ -102,8 +102,6 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                                 radius: 64,
                                 backgroundImage:
                                     AssetImage('assets/images/user.png'),
-                                // backgroundImage: NetworkImage(
-                                //     'https://banner2.cleanpng.com/20240323/ogb/transparent-iphone-camera-white-iphone-camera-on-flat-surface65fee27494bcf1.70391006.webp'),
                               ),
                         Positioned(
                           bottom: -10,
