@@ -1,4 +1,5 @@
 import 'package:babycare/screen/Login/sign_up_select_role.dart';
+import 'package:babycare/screen/doctor/doctor_dashboard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class _DoctorSignInState extends State<DoctorSignIn> {
         Get.snackbar("Login", "Success");
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Scaffold()),
+          MaterialPageRoute(builder: (context) => DoctorDashboard()),
         );
       } else {
         Get.snackbar("Login", "Failed");
@@ -204,7 +205,8 @@ class _DoctorSignInState extends State<DoctorSignIn> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SignUpSelectRole()),
+                MaterialPageRoute(
+                    builder: (context) => const SignUpSelectRole()),
               );
             },
             child: const Text(

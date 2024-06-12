@@ -1,4 +1,5 @@
-import 'package:babycare/screen/Login/user/user_sign_in.dart';
+import 'package:babycare/screen/Login/mom/enter_mom_details.dart';
+import 'package:babycare/screen/Login/mom/user_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class _UserSignUpState extends State<UserSignUp> {
         // Navigate to the topup page
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Scaffold()),
+          MaterialPageRoute(builder: (context) => EnterMomDetails()),
         );
       } else {
         Get.snackbar("Sign Up", "Failed");

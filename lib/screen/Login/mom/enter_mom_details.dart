@@ -1,25 +1,25 @@
 import 'dart:typed_data';
 
-import 'package:babycare/screen/doctor/add_data.dart';
-import 'package:babycare/screen/doctor/doctor_success.dart';
-import 'package:babycare/screen/doctor/utils.dart';
+import 'package:babycare/screen/Login/mom/add_data.dart';
+import 'package:babycare/screen/Login/mom/mom_success.dart';
+import 'package:babycare/screen/Login/mom/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class EnterDoctorDetails extends StatefulWidget {
-  const EnterDoctorDetails({super.key});
+class EnterMomDetails extends StatefulWidget {
+  const EnterMomDetails({super.key});
 
   @override
-  State<EnterDoctorDetails> createState() => _EnterDoctorDetailsState();
+  State<EnterMomDetails> createState() => _EnterDoctorDetailsState();
 }
 
-class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
+class _EnterDoctorDetailsState extends State<EnterMomDetails> {
   Uint8List? _image;
 
-  final TextEditingController nameEditingController = TextEditingController();
+  final TextEditingController ageEditingController = TextEditingController();
+  final TextEditingController fageEditingController = TextEditingController();
   final TextEditingController numberEditingController = TextEditingController();
-  final TextEditingController timeEditingController = TextEditingController();
-  final TextEditingController descriptionEditingController =
+  final TextEditingController addressEditingController =
       TextEditingController();
 
   void selectImage() async {
@@ -30,29 +30,25 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
   }
 
   void saveDoctor() async {
-    String name = nameEditingController.text;
+    String age = ageEditingController.text;
+    String fage = fageEditingController.text;
     String number = numberEditingController.text;
-    String time = timeEditingController.text;
-    String description = descriptionEditingController.text;
+    String address = addressEditingController.text;
 
     // ignore: unused_local_variable
     String resp = await StoreData().saveData(
-        name: name,
-        number: number,
-        time: time,
-        description: description,
-        file: _image!);
+        age: age, fage: fage, number: number, address: address, file: _image!);
 
-    nameEditingController.clear();
+    ageEditingController.clear();
+    fageEditingController.clear();
     numberEditingController.clear();
-    timeEditingController.clear();
-    descriptionEditingController.clear();
+    addressEditingController.clear();
 
     Navigator.push(
       // ignore: use_build_context_synchronously
       context,
       MaterialPageRoute(
-        builder: (context) => DoctorSuccess(),
+        builder: (context) => MomSuccess(),
       ),
     );
   }
@@ -76,7 +72,7 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Enter Doctor Details",
+                      "Enter Mom Details",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 30,
@@ -102,6 +98,8 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                                 radius: 64,
                                 backgroundImage:
                                     AssetImage('assets/images/user.png'),
+                                // backgroundImage: NetworkImage(
+                                //     'https://banner2.cleanpng.com/20240323/ogb/transparent-iphone-camera-white-iphone-camera-on-flat-surface65fee27494bcf1.70391006.webp'),
                               ),
                         Positioned(
                           bottom: -10,
@@ -128,9 +126,9 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                     ), // Set border color to green
                   ),
                   child: TextField(
-                    controller: nameEditingController,
+                    controller: ageEditingController,
                     decoration: const InputDecoration(
-                      hintText: 'Work Hospital Name',
+                      hintText: 'Enter Your Age',
                       contentPadding: EdgeInsets.all(10.0),
                       border: InputBorder.none,
                     ),
@@ -149,7 +147,7 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                   child: TextField(
                     controller: numberEditingController,
                     decoration: const InputDecoration(
-                      hintText: 'Enter Telephone Number',
+                      hintText: 'Enter Your Fetus Age',
                       contentPadding: EdgeInsets.all(10.0),
                       border: InputBorder.none,
                     ),
@@ -166,9 +164,9 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                     ), // Set border color to green
                   ),
                   child: TextField(
-                    controller: timeEditingController,
+                    controller: fageEditingController,
                     decoration: const InputDecoration(
-                      hintText: 'Working Time',
+                      hintText: 'Enter Your Telephone Number',
                       contentPadding: EdgeInsets.all(10.0),
                       border: InputBorder.none,
                     ),
@@ -189,9 +187,9 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                     maxLines: null,
                     expands: true,
                     keyboardType: TextInputType.multiline,
-                    controller: descriptionEditingController,
+                    controller: addressEditingController,
                     decoration: const InputDecoration(
-                      hintText: 'Enter Doctor Description',
+                      hintText: 'Enter Your Address',
                       contentPadding: EdgeInsets.all(10.0),
                       border: InputBorder.none,
                     ),

@@ -1,4 +1,5 @@
 import 'package:babycare/screen/Login/doctor/doctor_sign_in.dart';
+import 'package:babycare/screen/Login/doctor/enter_doctor_details.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
         // Navigate to the topup page
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Scaffold()),
+          MaterialPageRoute(builder: (context) => EnterDoctorDetails()),
         );
       } else {
         Get.snackbar("Sign Up", "Failed");

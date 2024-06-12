@@ -1,4 +1,4 @@
-import 'package:babycare/screen/mom/enter_mom_details.dart';
+import 'package:babycare/screen/Login/mom/enter_mom_details.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {

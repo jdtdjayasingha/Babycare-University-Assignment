@@ -1,3 +1,4 @@
+import 'package:babycare/screen/Login/sign_in_select_role.dart';
 import 'package:babycare/screen/test.dart';
 import 'package:flutter/material.dart';
 
@@ -86,7 +87,7 @@ class DoctorSuccess extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Test(),
+                        builder: (context) => SignInSelectRole(),
                       ),
                     );
                   },

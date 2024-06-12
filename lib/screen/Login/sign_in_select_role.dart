@@ -1,5 +1,5 @@
 import 'package:babycare/screen/Login/doctor/doctor_sign_in.dart';
-import 'package:babycare/screen/Login/user/user_sign_in.dart';
+import 'package:babycare/screen/Login/mom/user_sign_in.dart';
 import 'package:flutter/material.dart';
 
 class SignInSelectRole extends StatelessWidget {
@@ -39,8 +39,8 @@ class SignInSelectRole extends StatelessWidget {
           ),
           body: const TabBarView(
             children: <Widget>[
-              DoctorSignIn(),
               UserSignIn(),
+              DoctorSignIn(),
             ],
           )),
     );

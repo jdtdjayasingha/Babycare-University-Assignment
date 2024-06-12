@@ -1,4 +1,5 @@
 import 'package:babycare/screen/Login/sign_up_select_role.dart';
+import 'package:babycare/screen/mom/user_dashboard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class _UserSignInState extends State<UserSignIn> {
         Get.snackbar("Login", "Success");
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Scaffold()),
+          MaterialPageRoute(builder: (context) => UserDashboard()),
         );
       } else {
         Get.snackbar("Login", "Failed");
