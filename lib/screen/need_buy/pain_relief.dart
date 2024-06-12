@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_app/screen/need_buy/pain_relief.dart';
+import 'package:mobile_app/screen/need_buy/maternity_wear.dart';
 import 'package:mobile_app/screen/need_buy/skin_care.dart';
 
-class MaternityWear extends StatelessWidget {
-  const MaternityWear({super.key});
+class PainRelief extends StatelessWidget {
+  const PainRelief({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class MaternityWear extends StatelessWidget {
                       Text(
                         "Maternity",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -71,7 +71,7 @@ class MaternityWear extends StatelessWidget {
                       Text(
                         "Wear",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -131,7 +131,7 @@ class MaternityWear extends StatelessWidget {
                       Text(
                         'Pain',
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -139,7 +139,7 @@ class MaternityWear extends StatelessWidget {
                       Text(
                         'Relief',
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -202,7 +202,7 @@ class MaternityWear extends StatelessWidget {
             children: [
               const Center(
                 child: Text(
-                  "Maternity Wear",
+                  "Pain Relief",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 30,
@@ -239,7 +239,7 @@ class MaternityWear extends StatelessWidget {
                                             Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/maternity1.png",
+                                            "assets/images/pain1.png",
                                           ),
                                         ),
                                       ),
@@ -254,7 +254,7 @@ class MaternityWear extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    "Pregnancy Pillow",
+                                    "Belly Tape",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -283,7 +283,7 @@ class MaternityWear extends StatelessWidget {
                                             Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/maternity2.png",
+                                            "assets/images/pain2.png",
                                           ),
                                         ),
                                       ),
@@ -298,7 +298,7 @@ class MaternityWear extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    "Pregnancy Belt",
+                                    " Electric Heating Pad",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -336,7 +336,7 @@ class MaternityWear extends StatelessWidget {
                                               Radius.circular(25)),
                                           image: DecorationImage(
                                             image: AssetImage(
-                                              "assets/images/maternity3.png",
+                                              "assets/images/pain3.png",
                                             ),
                                           ),
                                         ),
@@ -351,7 +351,7 @@ class MaternityWear extends StatelessWidget {
                                   ),
                                   child: const Center(
                                     child: Text(
-                                      "Compression Stocking",
+                                      " Back Massager",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w700),
                                     ),
