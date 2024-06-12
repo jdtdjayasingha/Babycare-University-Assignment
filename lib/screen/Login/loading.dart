@@ -25,7 +25,7 @@ class _LodingScreenState extends State<LodingScreen> {
         _navigateToHome();
       } else {
         setState(() {
-          _progress += 0.1;
+          _progress += 0.2;
         });
       }
     });
