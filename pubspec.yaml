@@ -44,6 +44,7 @@ dependencies:
   pretty_gauge: ^1.0.1
   firebase_auth: ^4.19.4
   get: ^4.6.6
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
