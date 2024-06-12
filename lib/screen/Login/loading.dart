@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:babycare/screen/Login/sign_in_select_role.dart';
 import 'package:flutter/material.dart';
 
 class LodingScreen extends StatefulWidget {
@@ -35,7 +36,7 @@ class _LodingScreenState extends State<LodingScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const Scaffold(),
+        builder: (context) => const SignInSelectRole(),
       ),
     );
   }
