@@ -1,9 +1,9 @@
 import 'package:babycare/screen/need_buy/maternity_wear.dart';
-import 'package:babycare/screen/need_buy/skin_care.dart';
+import 'package:babycare/screen/need_buy/pain_relief.dart';
 import 'package:flutter/material.dart';
 
-class PainRelief extends StatelessWidget {
-  const PainRelief({super.key});
+class SkinCare extends StatelessWidget {
+  const SkinCare({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ class PainRelief extends StatelessWidget {
                       Text(
                         'Skin Care',
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -131,7 +131,7 @@ class PainRelief extends StatelessWidget {
                       Text(
                         'Pain',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -139,7 +139,7 @@ class PainRelief extends StatelessWidget {
                       Text(
                         'Relief',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -170,7 +170,7 @@ class PainRelief extends StatelessWidget {
             children: [
               const Center(
                 child: Text(
-                  "Pain Relief",
+                  "Skin Care",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 30,
@@ -207,7 +207,7 @@ class PainRelief extends StatelessWidget {
                                             Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/pain1.png",
+                                            "assets/images/Cerave.jpg",
                                           ),
                                         ),
                                       ),
@@ -222,7 +222,7 @@ class PainRelief extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    "Belly Tape",
+                                    "Cerave",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -251,7 +251,7 @@ class PainRelief extends StatelessWidget {
                                             Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/pain2.png",
+                                            "assets/images/Laroche Posay.jpg",
                                           ),
                                         ),
                                       ),
@@ -266,7 +266,7 @@ class PainRelief extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    " Electric Heating Pad",
+                                    "Laroche Posay",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -304,7 +304,7 @@ class PainRelief extends StatelessWidget {
                                               Radius.circular(25)),
                                           image: DecorationImage(
                                             image: AssetImage(
-                                              "assets/images/pain3.png",
+                                              "assets/images/The Ordinary.webp",
                                             ),
                                           ),
                                         ),
@@ -319,7 +319,7 @@ class PainRelief extends StatelessWidget {
                                   ),
                                   child: const Center(
                                     child: Text(
-                                      " Back Massager",
+                                      "The Ordinary",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w700),
                                     ),
