@@ -1,6 +1,6 @@
+import 'package:babycare/screen/need_buy/maternity_wear.dart';
+import 'package:babycare/screen/need_buy/skin_care.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_app/screen/need_buy/maternity_wear.dart';
-import 'package:mobile_app/screen/need_buy/skin_care.dart';
 
 class PainRelief extends StatelessWidget {
   const PainRelief({super.key});
@@ -154,38 +154,6 @@ class PainRelief extends StatelessWidget {
                   );
                 },
               ),
-              // ListTile(
-              //   title: Padding(
-              //     padding: EdgeInsets.only(
-              //       left: 15,
-              //     ),
-              //     child: Column(
-              //       children: [
-              //         Image.asset(
-              //           'assets/images/wear.png',
-              //           width: 180,
-              //         ),
-              //         Text(
-              //           'Daily',
-              //           style: TextStyle(
-              //             color: Colors.grey,
-              //             fontSize: 19,
-              //             fontWeight: FontWeight.w600,
-              //           ),
-              //         ),
-              //         Text(
-              //           'Wellness',
-              //           style: TextStyle(
-              //             color: Colors.grey,
-              //             fontSize: 19,
-              //             fontWeight: FontWeight.w600,
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              //   onTap: () {},
-              // ),
             ],
           ),
         ),
