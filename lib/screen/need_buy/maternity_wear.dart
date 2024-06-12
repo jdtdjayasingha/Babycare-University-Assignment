@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_app/screen/need_buy/pain_relief.dart';
+import 'package:mobile_app/screen/need_buy/skin_care.dart';
 
 class MaternityWear extends StatelessWidget {
   const MaternityWear({super.key});
@@ -53,14 +55,15 @@ class MaternityWear extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Image.asset(
-                        'assets/images/wear.png',
-                        width: 180,
+                      CircleAvatar(
+                        radius: 48,
+                        backgroundImage:
+                            AssetImage('assets/images/maternitymain.png'),
                       ),
                       Text(
                         "Maternity",
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -68,7 +71,7 @@ class MaternityWear extends StatelessWidget {
                       Text(
                         "Wear",
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                         ),
@@ -77,10 +80,10 @@ class MaternityWear extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const ()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MaternityWear()),
+                  );
                 },
               ),
               ListTile(
@@ -90,9 +93,10 @@ class MaternityWear extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Image.asset(
-                        'assets/images/wear.png',
-                        width: 180,
+                      CircleAvatar(
+                        radius: 48,
+                        backgroundImage:
+                            AssetImage('assets/images/SkinCare.jpg'),
                       ),
                       Text(
                         'Skin Care',
@@ -106,10 +110,10 @@ class MaternityWear extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const ()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SkinCare()),
+                  );
                 },
               ),
               ListTile(
@@ -119,9 +123,10 @@ class MaternityWear extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Image.asset(
-                        'assets/images/wear.png',
-                        width: 180,
+                      CircleAvatar(
+                        radius: 48,
+                        backgroundImage:
+                            AssetImage('assets/images/painmain.png'),
                       ),
                       Text(
                         'Pain',
@@ -143,49 +148,44 @@ class MaternityWear extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const ()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PainRelief()),
+                  );
                 },
               ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(
-                    left: 15,
-                  ),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'assets/images/wear.png',
-                        width: 180,
-                      ),
-                      Text(
-                        'Daily',
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 19,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      Text(
-                        'Wellness',
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 19,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const ()),
-                  // );
-                },
-              ),
+              // ListTile(
+              //   title: Padding(
+              //     padding: EdgeInsets.only(
+              //       left: 15,
+              //     ),
+              //     child: Column(
+              //       children: [
+              //         Image.asset(
+              //           'assets/images/wear.png',
+              //           width: 180,
+              //         ),
+              //         Text(
+              //           'Daily',
+              //           style: TextStyle(
+              //             color: Colors.grey,
+              //             fontSize: 19,
+              //             fontWeight: FontWeight.w600,
+              //           ),
+              //         ),
+              //         Text(
+              //           'Wellness',
+              //           style: TextStyle(
+              //             color: Colors.grey,
+              //             fontSize: 19,
+              //             fontWeight: FontWeight.w600,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              //   onTap: () {},
+              // ),
             ],
           ),
         ),
@@ -220,13 +220,7 @@ class MaternityWear extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         GestureDetector(
-                          onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //       builder: (context) => const ()),
-                            // );
-                          },
+                          onTap: () {},
                           child: Column(
                             children: [
                               Container(
@@ -238,12 +232,14 @@ class MaternityWear extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
-                                      height: 120,
-                                      width: 120,
+                                      height: 150,
+                                      width: 150,
                                       decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/wear.png",
+                                            "assets/images/maternity1.png",
                                           ),
                                         ),
                                       ),
@@ -268,13 +264,7 @@ class MaternityWear extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //       builder: (context) => const ()),
-                            // );
-                          },
+                          onTap: () {},
                           child: Column(
                             children: [
                               Container(
@@ -286,12 +276,14 @@ class MaternityWear extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
-                                      height: 120,
-                                      width: 120,
+                                      height: 150,
+                                      width: 150,
                                       decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/wear.png",
+                                            "assets/images/maternity2.png",
                                           ),
                                         ),
                                       ),
@@ -306,7 +298,7 @@ class MaternityWear extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    "Pregnancy Pillow",
+                                    "Pregnancy Belt",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -325,13 +317,7 @@ class MaternityWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           GestureDetector(
-                            onTap: () {
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //       builder: (context) => const ()),
-                              // );
-                            },
+                            onTap: () {},
                             child: Column(
                               children: [
                                 Container(
@@ -343,12 +329,14 @@ class MaternityWear extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
-                                        height: 120,
-                                        width: 120,
+                                        height: 150,
+                                        width: 150,
                                         decoration: const BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(25)),
                                           image: DecorationImage(
                                             image: AssetImage(
-                                              "assets/images/wear.png",
+                                              "assets/images/maternity3.png",
                                             ),
                                           ),
                                         ),
@@ -363,55 +351,7 @@ class MaternityWear extends StatelessWidget {
                                   ),
                                   child: const Center(
                                     child: Text(
-                                      "Pregnancy Pillow",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //       builder: (context) => const ()),
-                              // );
-                            },
-                            child: Column(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        height: 120,
-                                        width: 120,
-                                        decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                            image: AssetImage(
-                                              "assets/images/wear.png",
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  margin: const EdgeInsets.only(
-                                    bottom: 10,
-                                    top: 10,
-                                  ),
-                                  child: const Center(
-                                    child: Text(
-                                      "Pregnancy Pillow",
+                                      "Compression Stocking",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w700),
                                     ),
