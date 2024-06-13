@@ -15,26 +15,23 @@ class MaternityWear extends StatelessWidget {
         backgroundColor: Colors.white,
         shadowColor: const Color.fromARGB(255, 255, 255, 255),
         automaticallyImplyLeading: false,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 5),
-            child: Builder(
-              builder: (BuildContext context) {
-                return IconButton(
-                  icon: const Icon(
-                    Icons.arrow_back,
-                    size: 35,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Menu()),
-                    );
-                  },
-                );
-              },
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              size: 35,
+              color: Colors.black,
             ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Menu()),
+              );
+            },
           ),
+        ),
+        actions: [
           Padding(
             padding: const EdgeInsets.only(right: 5),
             child: Builder(
