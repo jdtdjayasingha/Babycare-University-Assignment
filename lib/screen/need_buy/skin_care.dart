@@ -224,7 +224,7 @@ class SkinCare extends StatelessWidget {
                                             Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/Cerave.jpg",
+                                            "assets/images/Laroche Posay.jpg",
                                           ),
                                         ),
                                       ),
@@ -239,7 +239,7 @@ class SkinCare extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    "Cerave",
+                                    "Laroche Posay",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -268,7 +268,7 @@ class SkinCare extends StatelessWidget {
                                             Radius.circular(25)),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            "assets/images/Laroche Posay.jpg",
+                                            "assets/images/Cerave.jpg",
                                           ),
                                         ),
                                       ),
@@ -283,7 +283,7 @@ class SkinCare extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    "Laroche Posay",
+                                    "Cerave",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
