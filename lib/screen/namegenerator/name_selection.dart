@@ -1,3 +1,4 @@
+import 'package:babycare/screen/namegenerator/boy/boy_name_generator.dart';
 import 'package:flutter/material.dart';
 
 class NameSelection extends StatefulWidget {
@@ -28,11 +29,11 @@ class _NameSelectionState extends State<NameSelection> {
                   backgroundColor: Color.fromARGB(255, 31, 171, 137),
                 ),
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //       builder: (context) => const AdminProfile()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const BoyNameGenerator()),
+                  );
                 },
                 child: const Text(
                   'Boy',

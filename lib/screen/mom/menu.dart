@@ -1,5 +1,6 @@
 import 'package:babycare/screen/appoinment/home_page.dart';
 import 'package:babycare/screen/bmi_tracker/bmi_screen.dart';
+import 'package:babycare/screen/namegenerator/name_selection.dart';
 import 'package:babycare/screen/need_buy/maternity_wear.dart';
 import 'package:babycare/screen/pregnancy_tracker/pregnancy_tracker_home.dart';
 import 'package:flutter/material.dart';
@@ -426,7 +427,13 @@ class _MenuState extends State<Menu> {
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.green),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const NameSelection()),
+                            );
+                          },
                           child: const Text(
                             'Generate now',
                             style: TextStyle(
