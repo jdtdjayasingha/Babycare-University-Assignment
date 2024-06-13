@@ -1,3 +1,4 @@
+import 'package:babycare/screen/mom/menu.dart';
 import 'package:babycare/screen/need_buy/maternity_wear.dart';
 import 'package:babycare/screen/need_buy/pain_relief.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,22 @@ class SkinCare extends StatelessWidget {
         backgroundColor: Colors.white,
         shadowColor: const Color.fromARGB(255, 255, 255, 255),
         automaticallyImplyLeading: false,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              size: 35,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Menu()),
+              );
+            },
+          ),
+        ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 5),
