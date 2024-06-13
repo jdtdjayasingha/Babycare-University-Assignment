@@ -1,3 +1,4 @@
+import 'package:babycare/screen/mom/menu.dart';
 import 'package:babycare/screen/need_buy/pain_relief.dart';
 import 'package:babycare/screen/need_buy/skin_care.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,25 @@ class MaternityWear extends StatelessWidget {
         shadowColor: const Color.fromARGB(255, 255, 255, 255),
         automaticallyImplyLeading: false,
         actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 5),
+            child: Builder(
+              builder: (BuildContext context) {
+                return IconButton(
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    size: 35,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Menu()),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 5),
             child: Builder(

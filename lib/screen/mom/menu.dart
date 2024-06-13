@@ -1,3 +1,6 @@
+import 'package:babycare/screen/appoinment/home_page.dart';
+import 'package:babycare/screen/bmi_tracker/bmi_screen.dart';
+import 'package:babycare/screen/need_buy/maternity_wear.dart';
 import 'package:babycare/screen/pregnancy_tracker/pregnancy_tracker_home.dart';
 import 'package:flutter/material.dart';
 
@@ -297,7 +300,7 @@ class _MenuState extends State<Menu> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Nutrition Guide",
+                          "BMI Tracker",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -309,9 +312,15 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.green),
+                                MaterialStateProperty.all<Color>(Colors.pink),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const BMIScreen()),
+                            );
+                          },
                           child: const Text(
                             'Track now',
                             style: TextStyle(
@@ -470,7 +479,13 @@ class _MenuState extends State<Menu> {
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.green),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MaternityWear()),
+                            );
+                          },
                           child: const Text(
                             'Shop now',
                             style: TextStyle(
@@ -523,7 +538,13 @@ class _MenuState extends State<Menu> {
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.green),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomePage()),
+                            );
+                          },
                           child: const Text(
                             'Meet now',
                             style: TextStyle(
