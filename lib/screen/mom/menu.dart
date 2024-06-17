@@ -1,6 +1,6 @@
 import 'package:babycare/screen/appoinment/home_page.dart';
 import 'package:babycare/screen/bmi_tracker/bmi_screen.dart';
-import 'package:babycare/screen/exercise/ms.dart';
+import 'package:babycare/screen/exerciseandfitness/exerciseandfitness.dart';
 import 'package:babycare/screen/namegenerator/name_selection.dart';
 import 'package:babycare/screen/need_buy/maternity_wear.dart';
 import 'package:babycare/screen/pregnancy_tracker/pregnancy_tracker_home.dart';

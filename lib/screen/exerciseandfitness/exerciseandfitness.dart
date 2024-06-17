@@ -1,15 +1,15 @@
 // ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers
 
-import 'package:babycare/screen1.dart';
-import 'package:babycare/screen10.dart';
-import 'package:babycare/screen2.dart';
-import 'package:babycare/screen3.dart';
-import 'package:babycare/screen4.dart';
-import 'package:babycare/screen5.dart';
-import 'package:babycare/screen6.dart';
-import 'package:babycare/screen7.dart';
-import 'package:babycare/screen8.dart';
-import 'package:babycare/screen9.dart';
+import 'package:babycare/screen/exerciseandfitness/screen1.dart';
+import 'package:babycare/screen/exerciseandfitness/screen10.dart';
+import 'package:babycare/screen/exerciseandfitness/screen2.dart';
+import 'package:babycare/screen/exerciseandfitness/screen3.dart';
+import 'package:babycare/screen/exerciseandfitness/screen4.dart';
+import 'package:babycare/screen/exerciseandfitness/screen5.dart';
+import 'package:babycare/screen/exerciseandfitness/screen6.dart';
+import 'package:babycare/screen/exerciseandfitness/screen7.dart';
+import 'package:babycare/screen/exerciseandfitness/screen8.dart';
+import 'package:babycare/screen/exerciseandfitness/screen9.dart';
 import 'package:flutter/material.dart';
 
 class HomePage2 extends StatelessWidget {
