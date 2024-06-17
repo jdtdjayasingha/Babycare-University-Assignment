@@ -7,7 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class EnterMomDetails extends StatefulWidget {
-  const EnterMomDetails({super.key});
+    final TextEditingController data;
+  final String email;
+
+  const EnterMomDetails({super.key, required this.data, required this.email});
 
   @override
   State<EnterMomDetails> createState() => _EnterDoctorDetailsState();
@@ -29,7 +32,8 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
     });
   }
 
-  void saveDoctor() async {
+  void saveMom() async {
+   String email = widget.email;
     String age = ageEditingController.text;
     String fage = fageEditingController.text;
     String number = numberEditingController.text;
@@ -37,7 +41,7 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
 
     // ignore: unused_local_variable
     String resp = await StoreData().saveData(
-        age: age, fage: fage, number: number, address: address, file: _image!);
+        email: email, age: age, fage: fage, number: number, address: address, file: _image!);
 
     ageEditingController.clear();
     fageEditingController.clear();
@@ -204,7 +208,7 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 31, 171, 137),
                     ),
-                    onPressed: saveDoctor,
+                    onPressed: saveMom,
                     child: const Text(
                       '    Next    ',
                       style: TextStyle(

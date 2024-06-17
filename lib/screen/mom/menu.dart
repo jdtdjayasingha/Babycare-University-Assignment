@@ -49,7 +49,7 @@ class _MenuState extends State<Menu> {
               Container(
                 width: double.infinity, // Make the container take full width
                 decoration: BoxDecoration(
-                  color: Colors.green[50],
+                  color: Colors.green[100],
                   borderRadius: BorderRadius.circular(10.0),
                   border: Border.all(
                     color: Colors.white,
@@ -105,7 +105,7 @@ class _MenuState extends State<Menu> {
                         Column(
                           children: [
                             Image.asset(
-                              'assets/images/user.png',
+                              'assets/images/userdoc.png',
                               width: 50,
                             ),
                           ],
@@ -129,7 +129,7 @@ class _MenuState extends State<Menu> {
                           ],
                         ),
                         SizedBox(
-                          width: 5,
+                          width: 50,
                         ),
                         Column(
                           children: [
@@ -231,7 +231,7 @@ class _MenuState extends State<Menu> {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.green[100],
+                  color: Colors.blue[100],
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -253,7 +253,7 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.green),
+                                MaterialStateProperty.all<Color>(Colors.blue),
                           ),
                           onPressed: () {
                             Navigator.push(
@@ -291,7 +291,66 @@ class _MenuState extends State<Menu> {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.pink[100],
+                  color: Colors.orange[100],
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Meet Your Doctor",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.orange),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomePage()),
+                            );
+                          },
+                          child: const Text(
+                            'Meet now',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/meetdoctor.png',
+                          width: 100,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.green[100],
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -313,7 +372,7 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.pink),
+                                MaterialStateProperty.all<Color>(Colors.green),
                           ),
                           onPressed: () {
                             Navigator.push(
@@ -350,7 +409,7 @@ class _MenuState extends State<Menu> {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue[100],
+                  color: Colors.red[100],
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -372,7 +431,7 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.green),
+                                MaterialStateProperty.all<Color>(Colors.red),
                           ),
                           onPressed: () {},
                           child: const Text(
@@ -508,65 +567,6 @@ class _MenuState extends State<Menu> {
                         Image.asset(
                           'assets/images/menu2.png',
                           width: 120,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.purple[100],
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Meet Doctor",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.green),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomePage()),
-                            );
-                          },
-                          child: const Text(
-                            'Meet now',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/menu6.png',
-                          width: 95,
                         ),
                       ],
                     ),

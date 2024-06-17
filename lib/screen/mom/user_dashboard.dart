@@ -1,8 +1,10 @@
 import 'package:babycare/screen/mom/menu.dart';
+import 'package:babycare/screen/mom/momprofile.dart';
 import 'package:flutter/material.dart';
 
 class UserDashboard extends StatefulWidget {
-  const UserDashboard({super.key});
+  final String email;
+  const UserDashboard({Key? key, required this.email}) : super(key: key);
 
   @override
   State<UserDashboard> createState() => _UserDashboardState();
@@ -12,25 +14,27 @@ class _UserDashboardState extends State<UserDashboard> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    // Text(
-    //   'Home',
-    //   style: optionStyle,
-    // ),
-    Menu(),
-    Text(
-      'Appointment',
-      style: optionStyle,
-    ),
-    Text(
-      'Doctors',
-      style: optionStyle,
-    ),
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
-  ];
+  List<Widget> get _widgetOptions {
+    return <Widget>[
+      // Text(
+      //   'Home',
+      //   style: optionStyle,
+      // ),
+      Menu(),
+      Text(
+        'Appointment',
+        style: optionStyle,
+      ),
+      Text(
+        'Doctors',
+        style: optionStyle,
+      ),
+      MomProfileDisplayData(
+        email: widget.email,
+        data: null,
+      ),
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {

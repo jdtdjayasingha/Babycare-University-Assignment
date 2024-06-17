@@ -58,7 +58,7 @@ class _LodingScreenState extends State<LodingScreen> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(
-              top: 350,
+              top: 300,
             
             ),
             child: Column(

@@ -28,11 +28,13 @@ class StoreData {
     required String number,
     required String address,
     required Uint8List file,
+    required String email,
   }) async {
     try {
       if (age.isNotEmpty && fage.isNotEmpty) {
         String imageUrl = await uploadImageToStorage(file);
         await _firestore.collection('saveMomDetails').add({
+          'email': email,
           'age': age,
           'fage': fage,
           'number': number,
