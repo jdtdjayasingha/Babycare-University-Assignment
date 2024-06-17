@@ -75,6 +75,40 @@ flutter:
     - assets/doctor4.jpg
     - assets/doctor5.jpg
     - assets/doctor6.jpg
+    - assets/1.jpg
+    - assets/3.png
+    - assets/4.webp
+    - assets/3.jpg
+    - assets/5.png
+    - assets/6.png
+    - assets/7.png
+    - assets/21.png
+    - assets/9.png
+    - assets/10.jpg
+    - assets/11.png
+    - assets/12.jpg
+    - assets/13.webp
+    - assets/14.webp
+    - assets/15.jpg
+    - assets/16.jpg
+    - assets/10.png
+    - assets/8.png
+    - assets/2.jpg
+    - assets/13.png
+    - assets/12.png
+    - assets/17.png
+    - assets/1.png
+    - assets/2.png
+    - assets/5.webp
+    - assets/4.jpg
+    - assets/6.webp
+    - assets/7.webp
+    - assets/6.jpg
+    - assets/5.jpg
+    - assets/14.jpg
+    - assets/18.jpg
+    - assets/19.jpg
+    - assets/20.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
