@@ -1,7 +1,10 @@
+import 'package:babycare/screen/doctor/doctorprofile.dart';
+import 'package:babycare/screen/doctor/doctorschedule.dart';
 import 'package:flutter/material.dart';
 
 class DoctorDashboard extends StatefulWidget {
-  const DoctorDashboard({super.key});
+  final String email;
+  const DoctorDashboard({Key? key, required this.email}) : super(key: key);
 
   @override
   State<DoctorDashboard> createState() => _DoctorDashboardState();
@@ -9,22 +12,23 @@ class DoctorDashboard extends StatefulWidget {
 
 class _DoctorDashboardState extends State<DoctorDashboard> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Schedule',
-      style: optionStyle,
-    ),
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
-  ];
+  late List<Widget> _widgetOptions;
+
+  @override
+  void initState() {
+    super.initState();
+    _widgetOptions = <Widget>[
+      // Text(
+      //   'Home',
+      //   style: optionStyle,
+      // ),
+      DoctorSchedule(),
+      DoctorProfileDisplayData(
+        email: widget.email,
+        data: null,
+      ),
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {
@@ -40,10 +44,10 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.home),
+          //   label: 'Home',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month_outlined),
             label: 'Schedule',

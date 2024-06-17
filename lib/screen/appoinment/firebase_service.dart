@@ -1,3 +1,4 @@
+
 import 'appointment_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -16,10 +17,9 @@ class FirebaseService {
         'selectedDate': appointment.selectedDate,
         'selectedTime': appointment.selectedTime,
         'fullName': appointment.fullName,
-        'age': appointment.age,
+        'email': appointment.email,
         'problem': appointment.problem,
-        'doctorName': doctorName,
-        'userEmail': userEmail,
+        'Doctor': "Dr. Michael Patel",
       });
     } catch (e) {
       // Handle errors

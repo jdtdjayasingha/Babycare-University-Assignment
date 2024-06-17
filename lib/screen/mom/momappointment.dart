@@ -1,15 +1,14 @@
-import 'package:babycare/screen/Login/sign_in_select_role.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class MomProfileDisplayData extends StatefulWidget {
+class MomAppDisplayData extends StatefulWidget {
   final String email;
-  const MomProfileDisplayData({super.key, required this.email, required data});
+  const MomAppDisplayData({super.key, required this.email, required data});
   @override
-  _MomProfileDisplayDataState createState() => _MomProfileDisplayDataState();
+  _MomAppDisplayDataState createState() => _MomAppDisplayDataState();
 }
 
-class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
+class _MomAppDisplayDataState extends State<MomAppDisplayData> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
         ),
         child: StreamBuilder<QuerySnapshot>(
           stream: _firestore
-              .collection('saveMomDetails')
+              .collection('appointments')
               .where('email', isEqualTo: widget.email)
               .snapshots(),
           builder:
@@ -39,28 +38,6 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                     document.data() as Map<String, dynamic>;
                 return Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                radius: 70,
-                                backgroundImage:
-                                    NetworkImage(data['imageLink']),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                '${data['name']}',
-                                style: TextStyle(fontSize: 35),
-                              ),
-                              SizedBox(height: 5),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
                     SizedBox(
                       height: 5,
                     ),
@@ -85,67 +62,74 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'PERSONAL DETAILS',
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.green),
-                                ),
                                 SizedBox(
                                   height: 15,
                                 ),
                                 Text(
-                                  'Age',
+                                  'Full Name',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['age']}',
+                                  '${data['fullName']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Email',
+                                  'Doctor Name',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['email']}',
+                                  '${data['Doctor']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Mobile Number',
+                                  'Selected Date',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['number']}',
+                                  '${data['SelectedDate']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Address',
+                                  'Selected Time',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['address']}',
+                                  '${data['selectedTime']}',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Problem',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '${data['problem']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
@@ -159,38 +143,6 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                     ),
                     SizedBox(
                       height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const SignInSelectRole()),
-                            );
-                          },
-                          child: Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.red,
-                            ),
-                            child: const Center(
-                              child: Text(
-                                "         Logout         ",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 );

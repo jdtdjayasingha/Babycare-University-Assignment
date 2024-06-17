@@ -26,7 +26,9 @@ class _DoctorSignInState extends State<DoctorSignIn> {
         Get.snackbar("Login", "Success");
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DoctorDashboard()),
+          MaterialPageRoute(
+              builder: (context) =>
+                  DoctorDashboard(email: emailController.text)),
         );
       } else {
         Get.snackbar("Login", "Failed");

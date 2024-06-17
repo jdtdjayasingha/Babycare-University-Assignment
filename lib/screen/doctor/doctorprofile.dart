@@ -2,14 +2,16 @@ import 'package:babycare/screen/Login/sign_in_select_role.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class MomProfileDisplayData extends StatefulWidget {
+class DoctorProfileDisplayData extends StatefulWidget {
   final String email;
-  const MomProfileDisplayData({super.key, required this.email, required data});
+  const DoctorProfileDisplayData(
+      {super.key, required this.email, required data});
   @override
-  _MomProfileDisplayDataState createState() => _MomProfileDisplayDataState();
+  _DoctorProfileDisplayDataState createState() =>
+      _DoctorProfileDisplayDataState();
 }
 
-class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
+class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
         ),
         child: StreamBuilder<QuerySnapshot>(
           stream: _firestore
-              .collection('saveMomDetails')
+              .collection('saveDoctorDetails')
               .where('email', isEqualTo: widget.email)
               .snapshots(),
           builder:
@@ -52,7 +54,7 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                '${data['name']}',
+                                '${data['dname']}',
                                 style: TextStyle(fontSize: 35),
                               ),
                               SizedBox(height: 5),
@@ -93,17 +95,17 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                                       color: Colors.green),
                                 ),
                                 SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Text(
-                                  'Age',
+                                  'Hospital Name',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['age']}',
+                                  '${data['name']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
@@ -138,14 +140,28 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                                   height: 10,
                                 ),
                                 Text(
-                                  'Address',
+                                  'Work Time',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['address']}',
+                                  '${data['time']}',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Description',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '${data['description']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(

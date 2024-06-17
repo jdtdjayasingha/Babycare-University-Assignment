@@ -1,15 +1,14 @@
-import 'package:babycare/screen/Login/sign_in_select_role.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class MomProfileDisplayData extends StatefulWidget {
-  final String email;
-  const MomProfileDisplayData({super.key, required this.email, required data});
+class DoctorDisplayData extends StatefulWidget {
+  const DoctorDisplayData({super.key});
+
   @override
-  _MomProfileDisplayDataState createState() => _MomProfileDisplayDataState();
+  _DoctorDisplayDataState createState() => _DoctorDisplayDataState();
 }
 
-class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
+class _DoctorDisplayDataState extends State<DoctorDisplayData> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   @override
   Widget build(BuildContext context) {
@@ -21,10 +20,7 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
           right: 20.0,
         ),
         child: StreamBuilder<QuerySnapshot>(
-          stream: _firestore
-              .collection('saveMomDetails')
-              .where('email', isEqualTo: widget.email)
-              .snapshots(),
+          stream: _firestore.collection('saveDoctorDetails').snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (snapshot.hasError) {
@@ -39,28 +35,6 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                     document.data() as Map<String, dynamic>;
                 return Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                radius: 70,
-                                backgroundImage:
-                                    NetworkImage(data['imageLink']),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                '${data['name']}',
-                                style: TextStyle(fontSize: 35),
-                              ),
-                              SizedBox(height: 5),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
                     SizedBox(
                       height: 5,
                     ),
@@ -81,43 +55,47 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                CircleAvatar(
+                                  radius: 100,
+                                  backgroundImage:
+                                      NetworkImage(data['imageLink']),
+                                ),
+                                SizedBox(height: 10),
                                 Text(
-                                  'PERSONAL DETAILS',
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.green),
+                                  '${data['dname']}',
+                                  style: TextStyle(fontSize: 35),
                                 ),
                                 SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Text(
-                                  'Age',
+                                  'Hospital Name',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['age']}',
+                                  '${data['name']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Email',
+                                  'Work Time',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['email']}',
+                                  '${data['time']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
@@ -138,14 +116,14 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                                   height: 10,
                                 ),
                                 Text(
-                                  'Address',
+                                  'Description',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['address']}',
+                                  '${data['description']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
@@ -159,38 +137,6 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                     ),
                     SizedBox(
                       height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const SignInSelectRole()),
-                            );
-                          },
-                          child: Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.red,
-                            ),
-                            child: const Center(
-                              child: Text(
-                                "         Logout         ",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 );

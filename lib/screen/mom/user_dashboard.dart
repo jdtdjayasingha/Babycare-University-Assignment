@@ -1,4 +1,6 @@
+import 'package:babycare/screen/doctor/doctorlist.dart';
 import 'package:babycare/screen/mom/menu.dart';
+import 'package:babycare/screen/mom/momappointment.dart';
 import 'package:babycare/screen/mom/momprofile.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +14,6 @@ class UserDashboard extends StatefulWidget {
 
 class _UserDashboardState extends State<UserDashboard> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> get _widgetOptions {
     return <Widget>[
       // Text(
@@ -21,14 +21,11 @@ class _UserDashboardState extends State<UserDashboard> {
       //   style: optionStyle,
       // ),
       Menu(),
-      Text(
-        'Appointment',
-        style: optionStyle,
+      MomAppDisplayData(
+        email: widget.email,
+        data: null,
       ),
-      Text(
-        'Doctors',
-        style: optionStyle,
-      ),
+      DoctorDisplayData(),
       MomProfileDisplayData(
         email: widget.email,
         data: null,
