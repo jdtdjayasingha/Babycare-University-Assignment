@@ -17,13 +17,17 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
             Text(
               "WEEKS",
               style: TextStyle(
-                fontSize: 45,
+                fontSize: 60,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             Container(
               decoration: BoxDecoration(
-                  border: Border.all(),
+                  border:
+                      Border.all(color: Colors.grey, style: BorderStyle.none),
                   borderRadius: BorderRadius.circular(10)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -32,6 +36,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
+                    color: Colors.grey,
                   ),
                 ),
               ),
@@ -70,10 +75,10 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                               color: Color.fromARGB(255, 215, 251, 232),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Color.fromARGB(255, 215, 251, 232),
+                                color: Colors.green,
                               )),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
                                 Text("1.32 kg"),
@@ -95,7 +100,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                               color: Color.fromARGB(255, 215, 251, 232),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Color.fromARGB(255, 215, 251, 232),
+                                color: Colors.green,
                               )),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -140,7 +145,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Mom",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -150,7 +155,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Start of the third trimester. Increased fatigue and possible shortness of breath. Continue regular prenatal checkups. Begin tracking baby’s movements. Possible Braxton Hicks contractions.",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 15,
                       ),
                     ),
                   ],
@@ -176,7 +181,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Baby",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -186,7 +191,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Brain development accelerates. Baby’s body fat increases. Eyes can focus, and bone marrow starts making blood cells.",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 15,
                       ),
                     ),
                   ],

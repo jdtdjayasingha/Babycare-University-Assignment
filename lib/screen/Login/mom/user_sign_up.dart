@@ -24,10 +24,13 @@ class _UserSignUpState extends State<UserSignUp> {
       );
       if (userCredential.user != null) {
         Get.snackbar("Sign Up", "Success");
-        // Navigate to the topup page
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => EnterMomDetails()),
+          MaterialPageRoute(
+              builder: (context) => EnterMomDetails(
+                    data: email,
+                    email: email.text,
+                  )),
         );
       } else {
         Get.snackbar("Sign Up", "Failed");
@@ -154,6 +157,12 @@ class _UserSignUpState extends State<UserSignUp> {
         GestureDetector(
           onTap: () {
             signup(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      EnterMomDetails(data: email, email: email.text)),
+            );
           },
           child: Container(
             height: 50,
