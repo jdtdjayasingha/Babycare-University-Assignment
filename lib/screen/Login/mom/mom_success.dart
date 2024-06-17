@@ -23,7 +23,7 @@ class MomSuccess extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/images/babycare.png',
+                      'assets/images/Babycare2.png',
                       width: 220,
                     ),
                   ],

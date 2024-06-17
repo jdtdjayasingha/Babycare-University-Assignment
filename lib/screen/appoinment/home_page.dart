@@ -42,8 +42,8 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                 top: 5,
-                left: 30,
-                right: 30,
+                left: 20,
+                right: 20,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,37 +71,8 @@ class HomePage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                left: 30,
-                right: 30,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _buildCatalogItem(
-                    context,
-                    'assets/doctor3.jpg',
-                    'Dr. Emily Nguyen',
-                    'Pediatrics',
-                    [
-                      ' Dr. Nguyen is a dedicated pediatrician known for her warm demeanor and exceptional care for children of all ages. She emphasizes preventive medicine and educates parents on promoting their children s health through proper nutrition, immunizations, and regular check-ups. Dr. Nguyen has a special interest in developmental pediatrics, providing early intervention for children with developmental delays or disabilities.',
-                    ],
-                  ),
-                  _buildCatalogItem(
-                    context,
-                    'assets/doctor4.jpg',
-                    'Dr. Javier Ramirez',
-                    'Orthopedic Surgery',
-                    [
-                      'Dr. Ramirez is a highly skilled orthopedic surgeon specializing in sports medicine and joint replacement. With advanced training in arthroscopic techniques, he treats a wide range of orthopedic conditions, from ACL injuries to degenerative joint diseases. Dr. Ramirez is committed to restoring his patients mobility and function, employing both surgical and non-surgical approaches tailored to each individual s needs.',
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 30,
-                right: 30,
+                left: 20,
+                right: 20,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,6 +93,35 @@ class HomePage extends StatelessWidget {
                     'Neurology',
                     [
                       'Dr. Chen is a leading neurologist with expertise in treating disorders of the nervous system, including epilepsy, multiple sclerosis, and stroke. He specializes in neuroimaging techniques to accurately diagnose and monitor neurological conditions, guiding personalized treatment plans for his patients. Dr. Chen is committed to improving the quality of life for individuals living with neurological disorders through innovative therapies and compassionate care.',
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+                right: 20,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _buildCatalogItem(
+                    context,
+                    'assets/doctor3.jpg',
+                    'Dr. Emily Nguyen',
+                    'Pediatrics',
+                    [
+                      ' Dr. Nguyen is a dedicated pediatrician known for her warm demeanor and exceptional care for children of all ages. She emphasizes preventive medicine and educates parents on promoting their children s health through proper nutrition, immunizations, and regular check-ups. Dr. Nguyen has a special interest in developmental pediatrics, providing early intervention for children with developmental delays or disabilities.',
+                    ],
+                  ),
+                  _buildCatalogItem(
+                    context,
+                    'assets/doctor4.jpg',
+                    'Dr. Javier Ramirez',
+                    'Orthopedic Surgery',
+                    [
+                      'Dr. Ramirez is a highly skilled orthopedic surgeon specializing in sports medicine and joint replacement. With advanced training in arthroscopic techniques, he treats a wide range of orthopedic conditions, from ACL injuries to degenerative joint diseases. Dr. Ramirez is committed to restoring his patients mobility and function, employing both surgical and non-surgical approaches tailored to each individual s needs.',
                     ],
                   ),
                 ],

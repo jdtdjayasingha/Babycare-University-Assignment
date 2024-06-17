@@ -1,3 +1,4 @@
+import 'package:babycare/screen/doctor/doctorlist.dart';
 import 'package:babycare/screen/mom/menu.dart';
 import 'package:babycare/screen/mom/momprofile.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +26,7 @@ class _UserDashboardState extends State<UserDashboard> {
         'Appointment',
         style: optionStyle,
       ),
-      Text(
-        'Doctors',
-        style: optionStyle,
-      ),
+      DoctorDisplayData(),
       MomProfileDisplayData(
         email: widget.email,
         data: null,

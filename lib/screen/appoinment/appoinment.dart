@@ -147,7 +147,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
-                'Age',
+                'Email',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -161,7 +161,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                 controller: _ageController,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                  hintText: 'Enter your age',
+                  hintText: 'Enter your Email Address',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -289,9 +289,8 @@ class _AppointmentPageState extends State<AppointmentPage> {
         selectedDate: _selectedDate!,
         selectedTime: '${_selectedTime!.hour}:${_selectedTime!.minute}',
         fullName: _fullNameController.text,
-        age: int.parse(_ageController.text),
+        email: _ageController.text,
         problem: _problemController.text,
-        doctorName: '',
       );
 
       _firebaseService
