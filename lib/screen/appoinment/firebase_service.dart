@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 import 'appointment_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

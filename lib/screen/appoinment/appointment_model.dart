@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 class Appointment {
   DateTime selectedDate;

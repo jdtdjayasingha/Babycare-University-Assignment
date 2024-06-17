@@ -1,17 +1,14 @@
-import 'package:babycare/screen/Login/sign_in_select_role.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class DoctorProfileDisplayData extends StatefulWidget {
-  final String email;
-  const DoctorProfileDisplayData(
-      {super.key, required this.email, required data});
+class DoctorSchedule extends StatefulWidget {
+  const DoctorSchedule({super.key});
+
   @override
-  _DoctorProfileDisplayDataState createState() =>
-      _DoctorProfileDisplayDataState();
+  _DoctorScheduleState createState() => _DoctorScheduleState();
 }
 
-class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
+class _DoctorScheduleState extends State<DoctorSchedule> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   @override
   Widget build(BuildContext context) {
@@ -23,10 +20,7 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
           right: 20.0,
         ),
         child: StreamBuilder<QuerySnapshot>(
-          stream: _firestore
-              .collection('saveDoctorDetails')
-              .where('email', isEqualTo: widget.email)
-              .snapshots(),
+          stream: _firestore.collection('appointments').snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (snapshot.hasError) {
@@ -41,28 +35,6 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
                     document.data() as Map<String, dynamic>;
                 return Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                radius: 70,
-                                backgroundImage:
-                                    NetworkImage(data['imageLink']),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                '${data['dname']}',
-                                style: TextStyle(fontSize: 35),
-                              ),
-                              SizedBox(height: 5),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
                     SizedBox(
                       height: 5,
                     ),
@@ -87,81 +59,74 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'PERSONAL DETAILS',
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.green),
-                                ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 15,
                                 ),
                                 Text(
-                                  'Hospital Name',
+                                  'Full Name',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['name']}',
+                                  '${data['fullName']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Email',
+                                  'Doctor Name',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['email']}',
+                                  '${data['Doctor']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Mobile Number',
+                                  'Selected Date',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['number']}',
+                                  '${data['SelectedDate']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Work Time',
+                                  'Selected Time',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['time']}',
+                                  '${data['selectedTime']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                  'Description',
+                                  'Problem',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['description']}',
+                                  '${data['problem']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
@@ -175,38 +140,6 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
                     ),
                     SizedBox(
                       height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const SignInSelectRole()),
-                            );
-                          },
-                          child: Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.red,
-                            ),
-                            child: const Center(
-                              child: Text(
-                                "         Logout         ",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 );
