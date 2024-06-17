@@ -200,7 +200,12 @@ class _UserSignInState extends State<UserSignIn> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Don't have an account?"),
+        const Text(
+          "Don't have an account?",
+          style: TextStyle(
+            fontSize: 15,
+          ),
+        ),
         TextButton(
             onPressed: () {
               Navigator.push(
@@ -211,7 +216,11 @@ class _UserSignInState extends State<UserSignIn> {
             },
             child: const Text(
               "Sign Up",
-              style: TextStyle(color: Colors.green),
+              style: TextStyle(
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
             ))
       ],
     );
