@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class EnterMomDetails extends StatefulWidget {
-    final TextEditingController data;
+  final TextEditingController data;
   final String email;
 
   const EnterMomDetails({super.key, required this.data, required this.email});
@@ -20,7 +20,7 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
   Uint8List? _image;
 
   final TextEditingController ageEditingController = TextEditingController();
-  final TextEditingController fageEditingController = TextEditingController();
+  final TextEditingController nnameEditingController = TextEditingController();
   final TextEditingController numberEditingController = TextEditingController();
   final TextEditingController addressEditingController =
       TextEditingController();
@@ -33,18 +33,23 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
   }
 
   void saveMom() async {
-   String email = widget.email;
+    String email = widget.email;
     String age = ageEditingController.text;
-    String fage = fageEditingController.text;
+    String nname = nnameEditingController.text;
     String number = numberEditingController.text;
     String address = addressEditingController.text;
 
     // ignore: unused_local_variable
     String resp = await StoreData().saveData(
-        email: email, age: age, fage: fage, number: number, address: address, file: _image!);
+        email: email,
+        age: age,
+        nname: nname,
+        number: number,
+        address: address,
+        file: _image!);
 
     ageEditingController.clear();
-    fageEditingController.clear();
+    nnameEditingController.clear();
     numberEditingController.clear();
     addressEditingController.clear();
 
@@ -130,6 +135,25 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
                     ), // Set border color to green
                   ),
                   child: TextField(
+                    controller: nnameEditingController,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Your Name',
+                      contentPadding: EdgeInsets.all(10.0),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20.0),
+                Container(
+                  width: double.infinity, // Make the container take full width
+                  decoration: BoxDecoration(
+                    color: Colors.green[50],
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(
+                      color: Colors.white,
+                    ), // Set border color to green
+                  ),
+                  child: TextField(
                     controller: ageEditingController,
                     decoration: const InputDecoration(
                       hintText: 'Enter Your Age',
@@ -150,25 +174,6 @@ class _EnterDoctorDetailsState extends State<EnterMomDetails> {
                   ),
                   child: TextField(
                     controller: numberEditingController,
-                    decoration: const InputDecoration(
-                      hintText: 'Enter Your Fetus Age',
-                      contentPadding: EdgeInsets.all(10.0),
-                      border: InputBorder.none,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20.0),
-                Container(
-                  width: double.infinity, // Make the container take full width
-                  decoration: BoxDecoration(
-                    color: Colors.green[50],
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(
-                      color: Colors.white,
-                    ), // Set border color to green
-                  ),
-                  child: TextField(
-                    controller: fageEditingController,
                     decoration: const InputDecoration(
                       hintText: 'Enter Your Telephone Number',
                       contentPadding: EdgeInsets.all(10.0),
