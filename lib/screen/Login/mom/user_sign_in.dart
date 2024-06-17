@@ -26,7 +26,8 @@ class _UserSignInState extends State<UserSignIn> {
         Get.snackbar("Login", "Success");
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => UserDashboard()),
+          MaterialPageRoute(
+              builder: (context) => UserDashboard(email: emailController.text)),
         );
       } else {
         Get.snackbar("Login", "Failed");
