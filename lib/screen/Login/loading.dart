@@ -58,14 +58,15 @@ class _LodingScreenState extends State<LodingScreen> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(
-              top: 300,
+              top: 350,
+            
             ),
             child: Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                    bottom: 100,
-                  ),
+                      bottom: 75,
+                      ),
                   child: Image.asset(
                     'assets/images/babycare.png',
                     width: 270,
@@ -73,17 +74,12 @@ class _LodingScreenState extends State<LodingScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
-                    left: 80,
-                    right: 80,
+                    left: 90,
+                    right: 90,
                   ),
-                  child: LinearProgressIndicator(
-                    value: _progress,
-                    backgroundColor: Color.fromARGB(180, 217, 217, 217),
-                    minHeight: 12.0,
-                    borderRadius: BorderRadius.circular(30),
-                    valueColor: AlwaysStoppedAnimation<Color>(
-                      const Color.fromARGB(200, 0, 128, 0),
-                    ),
+                  child: const CircularProgressIndicator(
+                    color: Colors.white,
+                    strokeWidth: 5,
                   ),
                 ),
               ],
