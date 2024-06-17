@@ -7,7 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class EnterDoctorDetails extends StatefulWidget {
-  const EnterDoctorDetails({super.key});
+  final TextEditingController data;
+  final String email;
+  const EnterDoctorDetails(
+      {super.key, required this.data, required this.email});
 
   @override
   State<EnterDoctorDetails> createState() => _EnterDoctorDetailsState();
@@ -16,6 +19,7 @@ class EnterDoctorDetails extends StatefulWidget {
 class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
   Uint8List? _image;
 
+  final TextEditingController dnameEditingController = TextEditingController();
   final TextEditingController nameEditingController = TextEditingController();
   final TextEditingController numberEditingController = TextEditingController();
   final TextEditingController timeEditingController = TextEditingController();
@@ -30,6 +34,8 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
   }
 
   void saveDoctor() async {
+    String email = widget.email;
+    String dname = dnameEditingController.text;
     String name = nameEditingController.text;
     String number = numberEditingController.text;
     String time = timeEditingController.text;
@@ -37,12 +43,15 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
 
     // ignore: unused_local_variable
     String resp = await StoreData().saveData(
+        email: email,
+        dname: dname,
         name: name,
         number: number,
         time: time,
         description: description,
         file: _image!);
 
+    dnameEditingController.clear();
     nameEditingController.clear();
     numberEditingController.clear();
     timeEditingController.clear();
@@ -117,6 +126,27 @@ class _EnterDoctorDetailsState extends State<EnterDoctorDetails> {
                 ),
                 const SizedBox(
                   height: 30,
+                ),
+                Container(
+                  width: double.infinity, // Make the container take full width
+                  decoration: BoxDecoration(
+                    color: Colors.green[50],
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(
+                      color: Colors.white,
+                    ), // Set border color to green
+                  ),
+                  child: TextField(
+                    controller: dnameEditingController,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Your Name',
+                      contentPadding: EdgeInsets.all(10.0),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 Container(
                   width: double.infinity, // Make the container take full width

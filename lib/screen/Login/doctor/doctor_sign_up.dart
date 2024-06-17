@@ -27,7 +27,11 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
         // Navigate to the topup page
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => EnterDoctorDetails()),
+          MaterialPageRoute(
+              builder: (context) => EnterDoctorDetails(
+                    data: email,
+                    email: email.text,
+                  )),
         );
       } else {
         Get.snackbar("Sign Up", "Failed");
@@ -154,6 +158,12 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
         GestureDetector(
           onTap: () {
             signup(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      EnterDoctorDetails(data: email, email: email.text)),
+            );
           },
           child: Container(
             height: 50,
