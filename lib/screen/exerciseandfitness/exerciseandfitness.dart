@@ -16,35 +16,19 @@ class HomePage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 42, 233, 100),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
-      ),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: Image.asset("assets/1.jpg"),
-              ),
               Text(
                 "Fullbody Workout",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 25),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              Text(
-                "Exercises",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
               ),
               const SizedBox(
                 height: 20,
@@ -54,7 +38,7 @@ class HomePage2 extends StatelessWidget {
                   constraints: BoxConstraints.tightFor(height: 100),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 12, 198, 55),
+                        backgroundColor: Color.fromARGB(255, 42, 233, 100),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                     onPressed: () {
@@ -163,7 +147,7 @@ class HomePage2 extends StatelessWidget {
                   constraints: BoxConstraints.tightFor(height: 100),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 12, 198, 55),
+                          backgroundColor: Color.fromARGB(255, 42, 233, 100),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20))),
                       onPressed: () {
@@ -270,7 +254,7 @@ class HomePage2 extends StatelessWidget {
                   constraints: BoxConstraints.tightFor(height: 100),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 12, 198, 55),
+                        backgroundColor: Color.fromARGB(255, 42, 233, 100),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                     onPressed: () {
@@ -378,7 +362,7 @@ class HomePage2 extends StatelessWidget {
                   constraints: BoxConstraints.tightFor(height: 100),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 12, 198, 55),
+                        backgroundColor: Color.fromARGB(255, 42, 233, 100),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                     onPressed: () {
@@ -486,7 +470,7 @@ class HomePage2 extends StatelessWidget {
                   constraints: BoxConstraints.tightFor(height: 100),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 12, 198, 55),
+                        backgroundColor: Color.fromARGB(255, 42, 233, 100),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                     onPressed: () {

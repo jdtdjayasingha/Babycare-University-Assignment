@@ -56,7 +56,10 @@ class _MomAppDisplayDataState extends State<MomAppDisplayData> {
                         ],
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                        ),
                         child: Row(
                           children: [
                             Column(
@@ -68,72 +71,72 @@ class _MomAppDisplayDataState extends State<MomAppDisplayData> {
                                 Text(
                                   'Full Name',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
                                   '${data['fullName']}',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Text(
                                   'Doctor Name',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
                                   '${data['Doctor']}',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Text(
                                   'Selected Date',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['SelectedDate']}',
-                                  style: TextStyle(fontSize: 18),
+                                  '${data['selectedDate']}',
+                                  style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Text(
                                   'Selected Time',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
                                   '${data['selectedTime']}',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Text(
                                   'Problem',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
                                   '${data['problem']}',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                               ],
                             ),

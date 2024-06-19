@@ -1,4 +1,3 @@
-
 class Appointment {
   DateTime selectedDate;
   String selectedTime;
