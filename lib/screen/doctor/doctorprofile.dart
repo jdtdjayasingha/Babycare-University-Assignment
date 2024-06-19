@@ -55,7 +55,10 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
                               SizedBox(height: 10),
                               Text(
                                 '${data['dname']}',
-                                style: TextStyle(fontSize: 35),
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               SizedBox(height: 5),
                             ],
@@ -112,16 +115,30 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
                                   height: 10,
                                 ),
                                 Text(
-                                  'Email',
+                                  'Work Time',
                                   style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
-                                  '${data['email']}',
+                                  '${data['time']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
+                                // SizedBox(
+                                //   height: 10,
+                                // ),
+                                // Text(
+                                //   'Email',
+                                //   style: TextStyle(
+                                //     fontSize: 22,
+                                //     fontWeight: FontWeight.bold,
+                                //   ),
+                                // ),
+                                // Text(
+                                //   '${data['email']}',
+                                //   style: TextStyle(fontSize: 18),
+                                // ),
                                 SizedBox(
                                   height: 10,
                                 ),
@@ -134,20 +151,6 @@ class _DoctorProfileDisplayDataState extends State<DoctorProfileDisplayData> {
                                 ),
                                 Text(
                                   '${data['number']}',
-                                  style: TextStyle(fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Work Time',
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${data['time']}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(

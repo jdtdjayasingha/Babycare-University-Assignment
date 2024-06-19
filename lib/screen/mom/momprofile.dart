@@ -53,7 +53,10 @@ class _MomProfileDisplayDataState extends State<MomProfileDisplayData> {
                               SizedBox(height: 10),
                               Text(
                                 '${data['name']}',
-                                style: TextStyle(fontSize: 35),
+                                style: TextStyle(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               SizedBox(height: 5),
                             ],

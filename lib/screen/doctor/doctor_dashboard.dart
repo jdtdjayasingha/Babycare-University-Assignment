@@ -1,3 +1,4 @@
+import 'package:babycare/screen/doctor/doctorhome.dart';
 import 'package:babycare/screen/doctor/doctorprofile.dart';
 import 'package:babycare/screen/doctor/doctorschedule.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
       //   'Home',
       //   style: optionStyle,
       // ),
+      DoctorHomeScreen(),
       DoctorSchedule(),
       DoctorProfileDisplayData(
         email: widget.email,
@@ -44,10 +46,10 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.home),
-          //   label: 'Home',
-          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month_outlined),
             label: 'Schedule',

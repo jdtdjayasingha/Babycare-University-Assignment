@@ -1,4 +1,5 @@
 import 'package:babycare/screen/mom/menu.dart';
+import 'package:babycare/screen/mom/user_dashboard.dart';
 import 'package:babycare/screen/need_buy/maternity_wear.dart';
 import 'package:babycare/screen/need_buy/pain_relief.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,10 @@ class SkinCare extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Menu()),
+                MaterialPageRoute(
+                    builder: (context) => UserDashboard(
+                          email: '',
+                        )),
               );
             },
           ),
