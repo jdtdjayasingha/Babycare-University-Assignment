@@ -17,13 +17,14 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
             Text(
               "WEEKS",
               style: TextStyle(
-                fontSize: 45,
+                fontSize: 60,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Container(
               decoration: BoxDecoration(
-                  border: Border.all(),
+                  border:
+                      Border.all(color: Colors.grey, style: BorderStyle.none),
                   borderRadius: BorderRadius.circular(10)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -32,12 +33,10 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
+                    color: Colors.grey,
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 10,
             ),
             Column(
               children: [
@@ -54,7 +53,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                           ),
                           Center(
                             child: CircleAvatar(
-                              radius: 160,
+                              radius: 150,
                               backgroundImage:
                                   AssetImage('assets/images/pregnancy1.png'),
                             ),
@@ -70,10 +69,10 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                               color: Color.fromARGB(255, 215, 251, 232),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Color.fromARGB(255, 215, 251, 232),
+                                color: Colors.green,
                               )),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
                                 Text("0"),
@@ -95,7 +94,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                               color: Color.fromARGB(255, 215, 251, 232),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Color.fromARGB(255, 215, 251, 232),
+                                color: Colors.green,
                               )),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -130,7 +129,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                   color: Color.fromARGB(255, 215, 251, 232),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Color.fromARGB(255, 215, 251, 232),
+                    color: Colors.green,
                   )),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -140,7 +139,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                     Text(
                       "Mom",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -150,7 +149,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                     Text(
                       "Menstrual cycle begins. Ovulation and conception. Early signs of pregnancy: missed period, light spotting, fatigue, breast tenderness. Start taking prenatal vitamins. Hormonal changes begin.",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                       ),
                     ),
                   ],
@@ -166,7 +165,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                   color: Color.fromARGB(255, 215, 251, 232),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Color.fromARGB(255, 215, 251, 232),
+                    color: Colors.green,
                   )),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -176,7 +175,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                     Text(
                       "Baby",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -186,7 +185,7 @@ class _PregnancyMonthOneState extends State<PregnancyMonthOne> {
                     Text(
                       "Fertilization, implantation, and initial cell division. Development of the neural tube, heart, and basic structures.",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                       ),
                     ),
                   ],
