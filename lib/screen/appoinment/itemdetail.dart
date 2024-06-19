@@ -20,17 +20,19 @@ class ItemDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Doctor Detail'),
-      ),
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              imagePath,
-              width: 150,
-              height: 150,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 50,
+                right: 50,
+              ),
+              child: Image.asset(
+                imagePath,
+              ),
             ),
             SizedBox(height: 20),
             Text(
@@ -57,7 +59,7 @@ class ItemDetailPage extends StatelessWidget {
                   SizedBox(height: 40),
                   SizedBox(
                     height: 50, // Set the desired height here
-                    width: 400, // Set the desired width here
+                    width: 350, // Set the desired width here
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -72,7 +74,8 @@ class ItemDetailPage extends StatelessWidget {
                       },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            const Color.fromARGB(255, 48, 239, 147)),
+                          Color.fromARGB(255, 31, 171, 137),
+                        ),
                       ),
                       child: Text(
                         'Schedule Appointment',

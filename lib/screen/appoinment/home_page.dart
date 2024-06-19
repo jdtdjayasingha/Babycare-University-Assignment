@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                   _buildCatalogItem(
                     context,
                     'assets/gounder.jpg',
-                    'Dr. Michael Patel',
+                    'Dr. Michel Patel',
                     'Oncology',
                     [
                       'Dr. Patel is a leading oncologist known for his expertise in the treatment of various cancers, including lung, breast, and prostate cancer. With a compassionate approach, he guides his patients through their treatment journey, offering the latest advancements in chemotherapy, immunotherapy, and targeted therapies. Dr. Patel is committed to not only treating the disease but also improving his patients quality of life.',
@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
                   _buildCatalogItem(
                     context,
                     'assets/doctor3.jpg',
-                    'Dr. Emily Nguyen',
+                    'Dr. Emily Nuyen',
                     'Pediatrics',
                     [
                       ' Dr. Nguyen is a dedicated pediatrician known for her warm demeanor and exceptional care for children of all ages. She emphasizes preventive medicine and educates parents on promoting their children s health through proper nutrition, immunizations, and regular check-ups. Dr. Nguyen has a special interest in developmental pediatrics, providing early intervention for children with developmental delays or disabilities.',
@@ -118,8 +118,8 @@ class HomePage extends StatelessWidget {
                   _buildCatalogItem(
                     context,
                     'assets/doctor4.jpg',
-                    'Dr. Javier Ramirez',
-                    'Orthopedic Surgery',
+                    'Dr. Javi Ramirez',
+                    'Orthopedics',
                     [
                       'Dr. Ramirez is a highly skilled orthopedic surgeon specializing in sports medicine and joint replacement. With advanced training in arthroscopic techniques, he treats a wide range of orthopedic conditions, from ACL injuries to degenerative joint diseases. Dr. Ramirez is committed to restoring his patients mobility and function, employing both surgical and non-surgical approaches tailored to each individual s needs.',
                     ],

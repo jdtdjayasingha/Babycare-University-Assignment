@@ -21,9 +21,6 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
-              height: 5,
-            ),
             Container(
               decoration: BoxDecoration(
                   border:
@@ -41,9 +38,6 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
             Column(
               children: [
                 Stack(
@@ -59,7 +53,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                           ),
                           Center(
                             child: CircleAvatar(
-                              radius: 160,
+                              radius: 150,
                               backgroundImage:
                                   AssetImage('assets/images/pregnancy7.png'),
                             ),
@@ -145,7 +139,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Mom",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -155,7 +149,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Start of the third trimester. Increased fatigue and possible shortness of breath. Continue regular prenatal checkups. Begin tracking baby’s movements. Possible Braxton Hicks contractions.",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                     ),
                   ],
@@ -181,7 +175,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Baby",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -191,7 +185,7 @@ class _PregnancyMonthSevenState extends State<PregnancyMonthSeven> {
                     Text(
                       "Brain development accelerates. Baby’s body fat increases. Eyes can focus, and bone marrow starts making blood cells.",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                     ),
                   ],

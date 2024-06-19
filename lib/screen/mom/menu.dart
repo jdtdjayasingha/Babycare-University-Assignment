@@ -129,7 +129,7 @@ class _MenuState extends State<Menu> {
                           ],
                         ),
                         SizedBox(
-                          width: 50,
+                          width: 40,
                         ),
                         Column(
                           children: [
@@ -395,7 +395,7 @@ class _MenuState extends State<Menu> {
                       children: [
                         Image.asset(
                           'assets/images/menu2.png',
-                          width: 100,
+                          width: 110,
                         ),
                       ],
                     ),
@@ -409,7 +409,7 @@ class _MenuState extends State<Menu> {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.red[100],
+                  color: Colors.purple[100],
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -431,7 +431,7 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.red),
+                                MaterialStateProperty.all<Color>(Colors.purple),
                           ),
                           onPressed: () {},
                           child: const Text(
@@ -462,7 +462,7 @@ class _MenuState extends State<Menu> {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.green[100],
+                  color: Colors.red[100],
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -484,7 +484,7 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.green),
+                                MaterialStateProperty.all<Color>(Colors.red),
                           ),
                           onPressed: () {
                             Navigator.push(
@@ -521,7 +521,7 @@ class _MenuState extends State<Menu> {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.orange[100],
+                  color: Colors.brown[100],
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -543,7 +543,7 @@ class _MenuState extends State<Menu> {
                         ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.orange),
+                                MaterialStateProperty.all<Color>(Colors.brown),
                           ),
                           onPressed: () {
                             Navigator.push(
