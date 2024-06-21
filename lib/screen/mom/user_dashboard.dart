@@ -16,10 +16,6 @@ class _UserDashboardState extends State<UserDashboard> {
   int _selectedIndex = 0;
   List<Widget> get _widgetOptions {
     return <Widget>[
-      // Text(
-      //   'Home',
-      //   style: optionStyle,
-      // ),
       Menu(),
       MomAppDisplayData(
         email: widget.email,

@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                     context,
                     'assets/gounder.jpg',
                     'Dr. Michel Patel',
-                    'Oncology',
+                    'Neurologist',
                     [
                       'Dr. Patel is a leading oncologist known for his expertise in the treatment of various cancers, including lung, breast, and prostate cancer. With a compassionate approach, he guides his patients through their treatment journey, offering the latest advancements in chemotherapy, immunotherapy, and targeted therapies. Dr. Patel is committed to not only treating the disease but also improving his patients quality of life.',
                     ],

@@ -99,7 +99,7 @@ class _DoctorScheduleState extends State<DoctorSchedule> {
                                   ),
                                 ),
                                 Text(
-                                  '${data['SelectedDate']}',
+                                  '${data['selectedDate']}',
                                   style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
