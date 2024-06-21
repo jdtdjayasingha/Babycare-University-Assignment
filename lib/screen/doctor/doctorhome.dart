@@ -4,7 +4,6 @@ class DoctorHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20,
@@ -12,6 +11,7 @@ class DoctorHomeScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
+            SizedBox(height: 70),
             SearchBar(),
             SizedBox(height: 20),
             Row(
@@ -19,7 +19,7 @@ class DoctorHomeScreen extends StatelessWidget {
               children: [
                 Text("Welcome Doctor !",
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     )),
               ],
@@ -65,14 +65,16 @@ class SearchBar extends StatelessWidget {
 class PopularChannels extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          'assets/images/dochome.png',
-          width: 600.0,
-          fit: BoxFit.cover,
-        ),
-      ],
+    return Center(
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/dochome.png',
+            width: 350.0,
+            fit: BoxFit.cover,
+          ),
+        ],
+      ),
     );
   }
 }

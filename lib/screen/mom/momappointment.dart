@@ -136,7 +136,7 @@ class _MomAppDisplayDataState extends State<MomAppDisplayData> {
                                   style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
-                                  height: 5,
+                                  height: 15,
                                 ),
                               ],
                             ),

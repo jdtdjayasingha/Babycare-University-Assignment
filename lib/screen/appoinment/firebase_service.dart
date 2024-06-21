@@ -1,4 +1,3 @@
-
 import 'appointment_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -14,7 +13,7 @@ class FirebaseService {
   }) async {
     try {
       await _appointmentsCollection.add({
-        'selectedDate': appointment.selectedDate,
+        'selectedDate': "22/6/2024",
         'selectedTime': appointment.selectedTime,
         'fullName': appointment.fullName,
         'email': appointment.email,
