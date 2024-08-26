@@ -21,7 +21,7 @@ Provide expert advice and support to expectant mothers through a secure platform
 ✅ Baby Name Generator<br>
 ✅ Shopping List<br>
 ✅ Channelling Doctor<br>
-✅ Exersice & Fitness Infomation 
+✅ Exersice & Fitness Infomation <br><br>
 
 <div>
  <img width=175 src="https://github.com/user-attachments/assets/31af42ff-c1c0-490b-9767-f603d44d503f"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
