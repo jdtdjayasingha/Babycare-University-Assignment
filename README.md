@@ -53,5 +53,6 @@ Provide expert advice and support to expectant mothers through a secure platform
  <img width=250 src="https://github.com/user-attachments/assets/003cb9f9-69a8-4435-bbc0-32f518357aa7"/>
 </div><br>
 
+## LinkedIn Link
 
-
+https://www.linkedin.com/posts/jdtdjayasingha_nsbmgreenuniversity-madfest2024-mobileappdevelopment-activity-7209656576020762625-jGrU?utm_source=share&utm_medium=member_desktop
